@@ -22,13 +22,15 @@ const HomeMain = () => {
     if (image == images[0]) {
       return (
         <Flip top>
-          <span>이전과는 다른 스마트 미러를 사용해 보세요.</span>
+          <span className="detail-text1">
+            이전과는 다른 스마트 미러를 사용해 보세요.
+          </span>
         </Flip>
       );
     } else if (image == images[1]) {
       return (
         <Flip top>
-          <span>
+          <span className="detail-text2">
             컬러매치 더 이상 고민하지 마세요. 스타일리스트는 색을 인식해
             자동으로 추천해 줍니다.
           </span>
@@ -37,7 +39,7 @@ const HomeMain = () => {
     } else {
       return (
         <Flip top>
-          <span>
+          <span className="detail-text3">
             스타일리스트는 여러 디바이스와 함께 연동해서 사용할 수 있습니다.
           </span>
         </Flip>
@@ -48,27 +50,33 @@ const HomeMain = () => {
   const perBar = () => {
     if (image == images[0]) {
       return (
-        <div style={{ display: "flex" }} className="imgPer">
-          <div style={{ flex: 1, backgroundColor: "green" }}></div>
-          <div style={{ flex: 1 }}></div>
-          <div style={{ flex: 1 }}></div>
-        </div>
+        <div
+          style={{
+            background:
+              "linear-gradient(to right, green 33.333%, white 33%, white 100%)",
+          }}
+          className="imgPer"
+        ></div>
       );
     } else if (image == images[1]) {
       return (
-        <div style={{ display: "flex" }} className="imgPer">
-          <div style={{ flex: 1, backgroundColor: "green" }}></div>
-          <div style={{ flex: 1, background: "green" }}></div>
-          <div style={{ flex: 1 }}></div>
-        </div>
+        <div
+          style={{
+            background:
+              "linear-gradient(to right, green 33.333%, green 66.333%, white 33.333%, white 100%)",
+          }}
+          className="imgPer"
+        ></div>
       );
     } else {
       return (
-        <div style={{ display: "flex" }} className="imgPer">
-          <div style={{ flex: 1, backgroundColor: "green" }}></div>
-          <div style={{ flex: 1, backgroundColor: "green" }}></div>
-          <div style={{ flex: 1, backgroundColor: "green" }}></div>
-        </div>
+        <div
+          style={{
+            background:
+              "linear-gradient(to right, green 33.333%, green 66.333%, green 100%)",
+          }}
+          className="imgPer"
+        ></div>
       );
     }
   };
@@ -87,6 +95,7 @@ const HomeMain = () => {
         setImgPer(1);
       }
     }, 6000); // 5초마다 이미지 변경
+
     setIntervalRef(intervalId);
     // 컴포넌트가 unmount 될 때 interval을 정리합니다.
     return () => clearInterval(intervalId);
@@ -100,13 +109,18 @@ const HomeMain = () => {
     }
   };
 
-  const pauseSlider = () =>{
+  const pauseSlider = () => {
     clearInterval(intervalRef);
     setIsClicked(!isClicked);
-  }
+  };
 
   return (
-    <div style={{ backgroundImage: `url(${image})` }} className="homeMain">
+    <div
+      style={{
+        backgroundImage: `url(${image})`,
+      }}
+      className="homeMain"
+    >
       <Navbar />
       <Container maxWidth="lg" className="main-contents">
         <Fade left duration={1700}>
@@ -119,9 +133,7 @@ const HomeMain = () => {
         </Fade>
 
         <Flip top delay={1400}>
-          <Flip top>
-            <span>{detailText()}</span>
-          </Flip>
+          <Flip top>{detailText()}</Flip>
 
           <div className="img-slide-btn">
             {perBar()}
@@ -136,8 +148,11 @@ const HomeMain = () => {
               {imgPer}/3
             </div>
             <button onClick={pauseSlider} className="pause-btn">
-              {isClicked ? (<FontAwesomeIcon icon={faPlay} />) : (<FontAwesomeIcon icon={faPause} />)}
-              
+              {isClicked ? (
+                <FontAwesomeIcon icon={faPlay} />
+              ) : (
+                <FontAwesomeIcon icon={faPause} />
+              )}
             </button>
             <button onClick={goToNextImage} className="next-btn">
               <FontAwesomeIcon icon={faAngleRight} />
