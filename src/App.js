@@ -1,6 +1,5 @@
 import "./App.css";
 import Home from "./pages/Home";
-import Footer from "./component/Footer";
 import { Routes, Route } from "react-router-dom";
 import Outfit from "./pages/Outfit";
 import ColorMatch from "./pages/ColorMatch";

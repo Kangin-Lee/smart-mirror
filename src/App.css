@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Comfortaa&family=Gothic+A1:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Comfortaa&family=Gothic+A1:wght@600&display=swap");
 
 body {
   margin: 0;
@@ -19,13 +19,13 @@ body {
   height: 100vh;
 }
 
-.home-outfit{
-  background-color: white;
-  position: relative;
+.home-outfit {
+  background-image: url("/public/images/mainSecond.jpg");
+  background-size: cover;
 }
 
 .home-color-match {
-  background-color: #b6d8f2;
+  background-color: rgb(250 175 75);
   position: relative;
 }
 
@@ -35,10 +35,8 @@ body {
   background-color: gray;
 }
 
-
-
 /* timeline========================================== */
-.timeline{
+.timeline {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -52,47 +50,53 @@ body {
   right: 40px;
 }
 
-.timeline svg{
+.timeline svg {
   font-size: 1.5em;
   margin-bottom: 5px;
 }
 
-.timeline-index{
+.timeline-index {
   display: flex;
   flex-direction: column;
   background-color: #202124;
   padding: 15px 10px;
 }
 
-.timeline-topic{
+.timeline-topic {
   display: flex;
   flex-direction: column;
-  
 }
 
-.timeline-main, .timeline-outfit, .timeline-color{
+.timeline-main,
+.timeline-outfit,
+.timeline-color {
   background-color: white;
   padding: 20px 15px;
   color: rgb(163, 163, 163);
 }
 /* homeMain======================================================= */
-.homeMain{
+.homeMain {
   height: 100vh;
   transition: 1.5s;
   background-position: center;
   background-size: cover;
 }
 
-.home-main::before{
-  content: '';
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.400), rgba(0, 0, 0, 0.400), rgba(0, 0, 0, 0.700));
+.home-main::before {
+  content: "";
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.7)
+  );
   position: absolute;
   top: 0px;
   height: 100%;
   width: 100%;
 }
 
-.menu-bar a{
+.menu-bar a {
   text-decoration: none;
   color: white;
 }
@@ -117,7 +121,7 @@ body {
 .logo div:last-child {
   display: flex;
 }
-.logo-stylist:hover{
+.logo-stylist:hover {
   color: white;
 }
 .menu-bar {
@@ -127,24 +131,24 @@ body {
   position: relative;
 }
 
-.menu{
+.menu {
   display: flex;
   align-items: center;
 }
 
-.menu a{
+.menu a {
   margin: 0 40px;
   font-size: 1.4em;
   font-weight: bold;
 }
 
-.menu a:hover{
+.menu a:hover {
   color: white;
   border-bottom: 3px solid white;
 }
 
-.menu:hover:after { 
-  transform: scaleX(1); 
+.menu:hover:after {
+  transform: scaleX(1);
 }
 
 .login-weather {
@@ -153,23 +157,23 @@ body {
   justify-content: flex-end;
 }
 
-.login{
+.login {
   background-color: transparent;
   border: none;
   margin: 0 20px;
   color: white;
   font-weight: bold;
 }
-.login-icon{
+.login-icon {
   font-size: 1.7em;
 }
-.img-slide-btn{
+.img-slide-btn {
   display: flex;
   align-items: center;
   margin-top: 90px;
 }
 
-.pause-btn{
+.pause-btn {
   background-color: transparent;
   padding: 5px 12px;
   border-radius: 100%;
@@ -178,23 +182,23 @@ body {
   margin-right: 10px;
 }
 
-.next-btn{
+.next-btn {
   background-color: transparent;
   padding: 5px 12px;
   border-radius: 100%;
   color: white;
   border: 2px solid white;
 }
-.imgPer{
+.imgPer {
   width: 180px;
   height: 5px;
   background-color: white;
 }
 
-.progress{
+.progress {
   height: 5px;
 }
-.scrolldown{
+.scrolldown {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -206,7 +210,8 @@ body {
 }
 
 @keyframes moveUpDown {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -214,45 +219,117 @@ body {
   }
 }
 
-.main-contents{
+.main-contents {
   margin-top: 100px;
 }
 
-.main-contents span{
+.main-contents span {
   font-size: 1.2em;
   color: white;
   line-height: 3;
-  font-family: 'Gothic A1', sans-serif;
+  font-family: "Gothic A1", sans-serif;
 }
 
-.main-text{
+.main-text {
   font-size: 4.2em;
   font-family: "Comfortaa", cursive;
   color: white;
 }
 
-.main-text strong strong{
+.main-text strong strong {
   font-family: "Caveat", cursive;
   font-size: 1.3em;
 }
 
-.main-text strong div{
+.main-text strong div {
   font-size: 0.6em;
 }
 
-.main-detail-text{
+.main-detail-text {
   margin-bottom: 300px;
 }
 
-.weather{
+.weather {
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
-
 }
 
-/* home-outfit======================================== */
+/* main-second-page======================================== */
+.main-second-page{
+  color: white;
+  position: relative;
+}
+
+.main-second-page h1{
+  font-size: 8em;
+  font-weight: bold;
+  margin: 70px 0 0 130px;
+}
+
+.second-page-category{
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: bold;
+  height: 70vh;
+}
+.second-page-contents{
+  height: 100%;
+  border-left: 2px solid lightgray;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: start;
+}
+
+.second-page-category svg{
+  font-size: 1.4em;
+}
+
+.second-page-category p{
+  width: 280px;
+  letter-spacing: 0.1em;
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 500;
+}
+
+.second-page-title{
+  font-size: 1.5em;
+  font-family: "Comfortaa", cursive;
+  margin: 10px 0 3px 0;
+}
+
+.goToPage-btn{
+  background-color: transparent;
+  border: 1.5px solid white;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
+.goToPage-btn:hover{
+  background-color: rgba(231, 229, 229, 0.308);
+  transition: 0.5s;
+}
+
+/* home-color-match========================================= */
+.main-third-page{
+  
+}
+
+.cotton{
+  position: absolute;
+  top: 180px;
+  left: 300px;
+}
+
+.painting{
+  position: absolute;
+  bottom: 180px;
+  right: 350px;
+}
 
 /* footer-------------------------------------------------------- */
 .footer {

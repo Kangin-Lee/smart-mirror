@@ -12,6 +12,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Flip } from "react-reveal";
 import HomeOutfit from "./HomeOutfit";
+import HomeColorMatch from "./HomeColorMatch";
 
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(1);
@@ -156,13 +157,15 @@ const Home = () => {
       <div className="inner home-main">
         <HomeMain />
       </div>
-      <div className="divider"></div>
+
       <div className="inner home-outfit">
         <HomeOutfit />
       </div>
-      <div className="divider"></div>
-      <div className="inner home-color-match">3</div>
-      <div className="divider"></div>
+
+      <div className="inner home-color-match">
+        <HomeColorMatch />
+      </div>
+
       <Footer />
     </div>
   );
